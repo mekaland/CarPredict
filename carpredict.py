@@ -59,7 +59,7 @@ print('R2',r2_score(y_test,y_pred))
 
 """Streamlit ile modeli yayma / deploy etme / Kullanıma sunma"""
 
-!pip install streamlit
+
 
 import streamlit as st
 #price tahmin fonksiyonu tanımla
@@ -95,5 +95,5 @@ if st.button('Tahmin'):
   pred=price_predict(make,model,trim,mileage,car_type,cylinder,liter,doors,cruise,sound,leather)
   st.write(f'Tahmini fiyat:{pred}')
 
-!pip install pyngrok
+
 
