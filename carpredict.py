@@ -61,7 +61,7 @@ print('R2',r2_score(y_test,y_pred))
 import streamlit as st
 #price tahmin fonksiyonu tanımla
 def price_predict(make,model,year,mileage,car_type,cylinder,liter,doors,cruise,sound,leather):
-    input_data =pd.dataFrame({'Make':[make],
+    input_data =pd.DataFrame({'Make':[make],
                               'Model':[model],
                               'Trim':[trim],
                               'Mileage':[mileage],
