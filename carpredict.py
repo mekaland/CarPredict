@@ -24,7 +24,6 @@ import pandas as pd
 # Excel dosyasını oku
 df = pd.read_excel("cars.xls")
 
-df
 
 #veri ön işleme
 X = df.drop('Price',axis=1)
@@ -32,9 +31,7 @@ y =df["Price"]
 
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=42)
 
-"""veri ön işleme ve standartlaştırma one-hot encoding işlemlerini otomatikleştiriyoruz Artık preprocess kullanarak kullanıcıdan arayüz aracılığıyla gelen veriyi modelimize uygun hale çevirebilriz
-
-"""
+#veri ön işleme ve standartlaştırma one-hot encoding işlemlerini otomatikleştiriyoruz Artık preprocess kullanarak kullanıcıdan arayüz aracılığıyla gelen veriyi modelimize uygun hale çevirebilriz
 
 preprocess = ColumnTransformer(
     transformers=[
@@ -57,7 +54,7 @@ y_pred = pipe.predict(X_test)
 print('MSE',mean_squared_error(y_test,y_pred)**0.5)
 print('R2',r2_score(y_test,y_pred))
 
-"""Streamlit ile modeli yayma / deploy etme / Kullanıma sunma"""
+#Streamlit ile modeli yayma / deploy etme / Kullanıma sunma"""
 
 
 
