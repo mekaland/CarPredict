@@ -63,7 +63,7 @@ import streamlit as st
 def price_predict(make,model,year,mileage,car_type,cylinder,liter,doors,cruise,sound,leather):
     input_data =pd.dataFrame({'Make':[make],
                               'Model':[model],
-                              'Year':[year],
+                              'Trim':[trim],
                               'Mileage':[mileage],
                               'Type':[car_type],
                               'Cylinder':[cylinder],
@@ -78,10 +78,10 @@ def price_predict(make,model,year,mileage,car_type,cylinder,liter,doors,cruise,s
 st.title("2. el araba fiyat tahmini:red_car:@kadirdagli")
 st.write("Arabanın özelliklerini seçiniz")
 make= st.selectbox('Marka',df['Make'].unique())
-model = st.selectbox('Model',df[df['Make']==make]['Model'].unique)
+model = st.selectbox('Model',df[df['Make']==make]['Model'].unique())
 trim = st.selectbox('Trim',df[(df['Make']==make) & (df['Model']==model)]['Trim'].unique())
 mileage = st.number_input('Kilometre',100,20000)
-car_type= st.selectbox('Araç Tipi',df[(df['Make']==make) & (df['Model']==model)&(df['Trim']==trim)]['Type'].unique())
+car_type= st.selectbox('Araç Tipi',df[(df['Make']==make) &(df['Model']==model)&(df['Trim']==trim)]['Type'].unique())
 cylinder = st.selectbox('Cylinder',df['Cylinder'].unique())
 liter = st.number_input('Yakıt Hacmi',1,10)
 doors = st.selectbox('Kapı Sayısı',df['Doors'].unique())
