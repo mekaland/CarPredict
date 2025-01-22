@@ -1,0 +1,4 @@
+Pandas sürümü: 2.2.2
+Xlrd sürümü: 2.0.1
+Scikit-learn sürümü: 1.6.0
+Streamlit sürümü: 1.41.1
