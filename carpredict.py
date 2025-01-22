@@ -22,7 +22,7 @@ import xlrd #excel dosyalarını okumak için
 import pandas as pd
 
 # Excel dosyasını oku
-df = pd.read_excel("/content/sample_data/cars.xls")
+df = pd.read_excel("cars.xls")
 
 df
 
