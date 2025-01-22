@@ -17,7 +17,7 @@ from sklearn.compose import ColumnTransformer #sütun dönüşüm işlemleri iç
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.pipeline import Pipeline #veri işleme hattı
 
-!pip install xldr #excel dosyaalrını okumak için
+import xlrd #excel dosyalarını okumak için
 
 import pandas as pd
 
