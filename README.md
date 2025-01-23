@@ -1,6 +1,7 @@
 Car Prediction Application
 
 🔗 Live App Link
+https://fl4vqykkd9hhrjo3a24ndp.streamlit.app/
 
 Car Price Prediction App
 
